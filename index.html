@@ -1,12 +1,10 @@
-# Full Updated HTML
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Graphics Portfolio</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
 
   <style>
@@ -27,6 +25,10 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -55,6 +57,7 @@
       font-family: var(--display);
       font-weight: 800;
       color: var(--accent);
+      letter-spacing: 0.05em;
     }
 
     .nav-links {
@@ -69,6 +72,7 @@
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
+      transition: 0.2s;
     }
 
     .nav-links a:hover {
@@ -104,8 +108,9 @@
     }
 
     .hero-sub {
-      max-width: 650px;
+      max-width: 700px;
       color: var(--muted);
+      font-size: 0.95rem;
     }
 
     section {
@@ -133,12 +138,13 @@
       font-family: var(--display);
       font-size: clamp(2rem, 5vw, 3.5rem);
       margin-bottom: 40px;
+      line-height: 1.1;
     }
 
     p {
       color: var(--muted);
       margin-bottom: 22px;
-      max-width: 720px;
+      max-width: 760px;
     }
 
     strong {
@@ -148,7 +154,7 @@
     .artifacts {
       display: flex;
       flex-direction: column;
-      gap: 90px;
+      gap: 100px;
     }
 
     .artifact {
@@ -171,7 +177,7 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       overflow: hidden;
-      padding: 10px;
+      padding: 12px;
     }
 
     .artifact-img {
@@ -191,8 +197,8 @@
 
     .artifact h3 {
       font-family: var(--display);
-      font-size: 1.8rem;
-      margin-bottom: 16px;
+      font-size: 1.9rem;
+      margin-bottom: 18px;
     }
 
     .artifact-meta {
@@ -224,23 +230,17 @@
       padding: 40px;
       text-align: center;
       color: var(--muted);
+      font-size: 0.8rem;
     }
 
     @media (max-width: 768px) {
+
       nav {
         padding: 18px 24px;
       }
 
       .nav-links {
         display: none;
-      }
-
-      .artifact {
-        grid-template-columns: 1fr;
-      }
-
-      .artifact.flip {
-        direction: ltr;
       }
 
       section {
@@ -250,13 +250,26 @@
       .hero {
         padding: 120px 24px 60px;
       }
+
+      .artifact {
+        grid-template-columns: 1fr;
+      }
+
+      .artifact.flip {
+        direction: ltr;
+      }
     }
+
   </style>
 </head>
+
 <body>
 
 <nav>
-  <div class="nav-logo">IAMLYNIJAH</div>
+
+  <div class="nav-logo">
+    IAMLYNIJAH
+  </div>
 
   <ul class="nav-links">
     <li><a href="#start">Start</a></li>
@@ -264,10 +277,14 @@
     <li><a href="#difficulty">Difficulty</a></li>
     <li><a href="#bunny">Bunny</a></li>
   </ul>
+
 </nav>
 
 <div class="hero">
-  <p class="hero-tag">Computer Graphics — Spring 2025</p>
+
+  <p class="hero-tag">
+    Computer Graphics • Spring 2025
+  </p>
 
   <h1>
     From<br>
@@ -276,83 +293,153 @@
 
   <p class="hero-sub">
     A semester of learning what it actually takes to put a pixel on a screen.
+    I came into this class thinking graphics was mostly about making cool visuals.
+    I left understanding how much math, geometry, shaders, and problem solving are hidden behind every image we see.
   </p>
+
 </div>
 
 <div class="divider"></div>
 
 <section id="start">
-  <p class="section-label">01 — Introduction</p>
 
-  <h2>What even is Computer Graphics?</h2>
+  <p class="section-label">
+    01 • Introduction
+  </p>
+
+  <h2>
+    What even is Computer Graphics?
+  </h2>
 
   <p>
-    Before this class, I thought graphics was mostly Photoshop and 3D modeling.
-    I learned that graphics is really about math, geometry, shaders, and the GPU.
+    Before this course, I thought computer graphics was mostly Photoshop, Blender,
+    and animation software. I had no idea how low level graphics actually are.
   </p>
 
   <p>
-    Every image on a screen is made from calculations, vertices, transformations,
-    and pixels being colored one by one.
+    Every image on a screen comes from coordinates, transformations, buffers,
+    interpolation, shaders, and the GPU calculating thousands of tiny operations.
+    Even simple visuals are built from math.
   </p>
+
+  <p>
+    This portfolio is less about showing perfect renders and more about documenting
+    what it actually felt like learning graphics from the ground up.
+    Some projects surprised me, some frustrated me, and some completely changed
+    how I think about digital images.
+  </p>
+
 </section>
 
 <div class="divider"></div>
 
 <section id="work">
-  <p class="section-label">02 — The Work</p>
 
-  <h2>The artifacts.</h2>
+  <p class="section-label">
+    02 • The Work
+  </p>
+
+  <h2>
+    The artifacts.
+  </h2>
 
   <div class="artifacts">
 
     <div class="artifact">
+
       <div class="artifact-canvas-wrap">
         <img src="images/house.png" class="artifact-img" alt="House assignment">
       </div>
 
       <div>
-        <p class="artifact-number">Artifact 01</p>
 
-        <h3>The House</h3>
+        <p class="artifact-number">
+          Artifact 01
+        </p>
+
+        <h3>
+          The House That Humbled Me
+        </h3>
 
         <div class="artifact-meta">
           <span class="tag">WebGL</span>
           <span class="tag">Shaders</span>
           <span class="tag">Triangles</span>
+          <span class="tag">HW1</span>
         </div>
 
         <p>
           This assignment introduced me to manually building geometry with triangles.
-          Every point had to be placed by hand.
+          Every point had to be placed by hand using coordinates.
+          The GPU then used shaders to color the shapes and display them on screen.
         </p>
+
+        <p>
+          Honestly, my first reaction was basically:
+          <em>damn, all this work for one triangle?</em>
+        </p>
+
+        <p>
+          I started thinking about giant kaleidoscope graphics and complicated visuals online,
+          and suddenly I realized how many triangles, shaders, and calculations those must actually require.
+          That was one of the first moments where graphics started feeling less like art software
+          and more like applied mathematics.
+        </p>
+
+        <p>
+          What the viewer is looking at is a simple house made from primitive geometry.
+          The body is built from triangles and the chimney is just rendered lines.
+          Even something this simple still required understanding coordinates,
+          buffers, shaders, and rendering setup.
+        </p>
+
       </div>
+
     </div>
 
     <div class="artifact flip">
+
       <div class="artifact-canvas-wrap">
         <img src="images/shapes.png" class="artifact-img" alt="Polygon approximation assignment">
       </div>
 
       <div>
-        <p class="artifact-number">Artifact 02</p>
 
-        <h3>There Are No Circles</h3>
+        <p class="artifact-number">
+          Artifact 02
+        </p>
+
+        <h3>
+          There Are No Circles
+        </h3>
 
         <div class="artifact-meta">
           <span class="tag">Trigonometry</span>
           <span class="tag">Polygons</span>
-          <span class="tag">WebGL</span>
+          <span class="tag">Approximation</span>
         </div>
 
         <p>
           These shapes demonstrate how circles are approximated using polygons.
-          More vertices create smoother curves.
+          The more vertices added, the smoother the shape appears.
         </p>
+
+        <p>
+          What surprised me was realizing there are not really perfect circles in graphics.
+          A circle is basically just a shape with enough points that your eyes stop noticing the edges.
+        </p>
+
+        <p>
+          The math behind this involved trigonometry using sine and cosine to calculate points around the shape.
+          This assignment helped me understand how geometry and approximation work together inside graphics systems.
+        </p>
+
       </div>
+
     </div>
 
     <div class="artifact">
+
       <div class="artifact-canvas-wrap" style="display:flex; flex-direction:column; gap:16px;">
 
         <img src="images/grayscale1.png" class="artifact-img" alt="Gradient 1">
@@ -366,32 +453,63 @@
       </div>
 
       <div>
-        <p class="artifact-number">Artifact 03</p>
 
-        <h3>Color Interpolation</h3>
+        <p class="artifact-number">
+          Artifact 03
+        </p>
+
+        <h3>
+          Two Ways to Make a Rainbow
+        </h3>
 
         <div class="artifact-meta">
           <span class="tag">GLSL</span>
-          <span class="tag">Gradients</span>
-          <span class="tag">Rasterization</span>
+          <span class="tag">Interpolation</span>
+          <span class="tag">Fragment Shader</span>
         </div>
 
         <p>
-          These assignments explored gradients, color interpolation,
-          and how fragment shaders compute color across surfaces.
+          These assignments explored gradients, interpolation,
+          and how colors are calculated across surfaces.
         </p>
+
+        <p>
+          I actually did the attribute interpolation version first.
+          But the rainbow surprised me way more because the difference between fragment interpolation
+          and attribute interpolation became really noticeable.
+        </p>
+
+        <p>
+          In the attribute version, colors are attached to vertices and blended across the surface.
+          In the fragment shader version, color is calculated directly per pixel.
+          Even though the results looked similar at first,
+          understanding that the calculations were happening differently completely changed how I saw the rendering pipeline.
+        </p>
+
+        <p>
+          This was one of the assignments where shaders finally started making sense to me.
+          The visuals were simple, but the logic behind them was deeper than I expected.
+        </p>
+
       </div>
+
     </div>
 
   </div>
+
 </section>
 
 <div class="divider"></div>
 
 <section id="difficulty">
-  <p class="section-label">03 — Reflection</p>
 
-  <h2>Moment of Difficulty</h2>
+  <p class="section-label">
+    03 • Moment of Difficulty
+  </p>
+
+  <h2>
+    Being honest with myself.
+  </h2>
 
   <div class="difficulty-block">
 
@@ -402,9 +520,9 @@
 
     <p>
       For HW1, I originally used AI to help make my house look better because
-      I already knew my hand-made version was going to look really simple.
-      The AI-generated version had windows, outlines, doors, and extra detail,
-      and I got caught up trying to out-render everyone else instead of focusing
+      I already knew my hand made version was going to look really simple.
+      The AI generated version had windows, outlines, doors, and extra detail,
+      and I got caught up trying to out render everyone else instead of focusing
       on actually learning the material.
     </p>
 
@@ -420,12 +538,9 @@
     </p>
 
     <p>
-      But after continuing through the semester, I realized that raw starting point
-      was actually important.
-      The class was never about instantly producing the most impressive render.
-      It was about understanding how graphics actually work —
-      learning shaders, triangles, transformations, lighting, interpolation,
-      and how every image is built piece by piece.
+      But later in the semester, I realized that raw starting point was actually important.
+      The course was never about instantly producing the most impressive render.
+      It was about understanding how graphics actually work step by step.
     </p>
 
     <p>
@@ -434,14 +549,20 @@
     </p>
 
   </div>
+
 </section>
 
 <div class="divider"></div>
 
 <section id="bunny">
-  <p class="section-label">04 — Final Assignment</p>
 
-  <h2>The Stanford Bunny</h2>
+  <p class="section-label">
+    04 • Final Assignment
+  </p>
+
+  <h2>
+    The Stanford Bunny
+  </h2>
 
   <div class="artifact">
 
@@ -450,9 +571,14 @@
     </div>
 
     <div>
-      <p class="artifact-number">Artifact 04</p>
 
-      <h3>3D Model Rendering</h3>
+      <p class="artifact-number">
+        Artifact 04
+      </p>
+
+      <h3>
+        3D Model Rendering
+      </h3>
 
       <div class="artifact-meta">
         <span class="tag">Phong Shading</span>
@@ -467,34 +593,87 @@
       </p>
 
       <p>
-        Seeing the Stanford Bunny render correctly in my browser felt like the culmination of everything learned during the semester.
+        I loaded the Stanford Bunny into the renderer and honestly it was awesome.
+        Being able to rotate it and change the view directly inside my HTML page
+        made everything from the semester finally feel real.
       </p>
+
+      <p>
+        At first only half the bunny showed because the bottom half was getting cut off
+        by my camera placement. I had to slowly move and adjust the model little by little
+        until I was finally happy with where it sat on the screen.
+      </p>
+
+      <p>
+        What the viewer is looking at is a rendered 3D mesh with lighting calculations applied to its surface.
+        Normals affect how light reflects across the bunny,
+        and the shading model changes how smooth and realistic the surface appears.
+      </p>
+
+      <p>
+        Once it finally rotated correctly inside the browser,
+        it genuinely felt rewarding because it pulled together almost every concept from the course.
+      </p>
+
     </div>
 
   </div>
+
 </section>
 
 <div class="divider"></div>
 
 <section>
-  <p class="section-label">05 — Reflection</p>
 
-  <h2>What I Learned</h2>
+  <p class="section-label">
+    05 • Reflection
+  </p>
+
+  <h2>
+    What I actually learned.
+  </h2>
 
   <p>
-    This course completely changed how I think about graphics.
-    I learned how geometry, shaders, and mathematical transformations work together to create rendered images.
+    I came into this course thinking graphics was mostly about making things look cool.
+    By the end, I realized graphics is really about understanding how math becomes an image.
   </p>
 
   <p>
-    From simple triangles to rendering 3D models, every assignment helped build a stronger understanding of the graphics pipeline.
+    Every assignment forced me to think differently about what happens behind the screen.
+    Coordinates become geometry, geometry becomes fragments,
+    shaders calculate color, and the GPU turns all of it into something visible.
   </p>
+
+  <p>
+    The biggest thing I learned was that progress in graphics is not instant.
+    Most of the course was building understanding piece by piece.
+    Looking back now, the simple projects ended up teaching me the most.
+  </p>
+
+</section>
+
+<div class="divider"></div>
+
+<section>
+
+  <p class="section-label">
+    AI Use
+  </p>
+
+  <div class="difficulty-block">
+
+    <p>
+      AI tools were used to help refine wording and organize parts of this portfolio.
+      The reflections, experiences, technical explanations, and personal observations are my own.
+    </p>
+
+  </div>
+
 </section>
 
 <footer>
-  Lynijah Russell — Computer Graphics Portfolio — Spring 2025
+  Lynijah Russell • Computer Graphics Portfolio • Spring 2025
 </footer>
 
 </body>
 </html>
-```
